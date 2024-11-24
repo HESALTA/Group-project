@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(./mountain.jfif);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            width: 350px;
+            padding: 32px;
+            border-radius: 12px;
+            border: solid 3px rgba(255, 255, 255, 0.2);
+            box-shadow: 0px 0px 40px 15px rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        .login-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #32CDD5;
+        }
+
+        .input-box {
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 99px;
+            border: solid 2px transparent;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+            caret-color: white;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .input-box input:focus {
+            border: solid 2px #32CDD5;
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 20px;
+            transition: 0.3s ease;
+        }
+
+        .input-box input:focus + i {
+            color: white;
+        }
+
+        .remember-forgot-box {
+            display: flex;
+            width: 100%;
+            margin-top: 16px;
+            justify-content: space-between;
+        }
+
+        .remember-forgot-box h5 {
+            font-weight: normal;
+        }
+
+        .remember-me {
+            display: flex;
+            gap: 8px;
+        }
+
+        .forgot-password {
+            color: white;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 12px 0;
+            background: #32CDD5;
+            border: none;
+            border-radius: 99px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .login-button:hover {
+            background: #28b7bb;
+        }
+
+        .login-button:focus {
+            outline: #32CDD85A 3px solid;
+        }
+
+        .dont-have-an-account a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .dont-have-an-account a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form class="container" id="loginForm"> 
+        <h1 class="login-title">Login</h1> 
+                
+        <section class="input-box"> 
+            <input type="text" name="username" id="username" placeholder="Username" required> 
+            <i class="fas fa-user"></i>
+        </section> 
+
+        <section class="input-box"> 
+            <input type="password" name="password" id="password" placeholder="Password" required> 
+            <i class="fas fa-lock"></i> 
+        </section> 
+                
+        <section class="remember-forgot-box"> 
+            <div class="remember-me"> 
+                <input type="checkbox" name="remember-me" id="remember-me"> 
+                <label for="remember-me"> 
+                    <h5>Remember me</h5> 
+                </label> 
+            </div> 
+            <a class="forgot-password" href="#"> 
+                <h5>Forgot password?</h5> 
+            </a> 
+        </section> 
+                
+        <button class="login-button" type="submit"> 
+            Login 
+        </button> 
+                
+        <h5 class="dont-have-an-account"> 
+            Don't have an account? 
+            <a href="#"><b>Register</b></a> 
+        </h5> 
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            if (username === "" || password === "") {
+                event.preventDefault(); 
+                alert("Error: Both username and password are required.");
+            } else if (username.length < 4) {
+                event.preventDefault();
+                alert("Username must be at least 4 characters.");
+            } else if (password.length < 6) {
+                event.preventDefault();
+                alert("Password must be at least 6 characters.");
+            }
+        });
+    </script>
+</body>
+</html>
+
