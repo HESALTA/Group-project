@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr 1fr;
+            height: 100%; /* Fill the entire height of the viewport */
+            width: 100%;  /* Fill the entire width of the viewport */
+            gap: 10px;
+            padding: 20px;
+        }
+
+        header, nav, section, article, aside, footer {
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #cfe4fc;
+            grid-column: span 2;
+        }
+
+        nav {
+            background-color: #fccfcf;
+            grid-column: span 2;
+        }
+
+        section {
+            background-color: #fcf8cf;
+        }
+
+        aside {
+            background-color: #fef3cf;
+        }
+
+        article {
+            background-color: #e5d9fc;
+            grid-column: span 2;
+        }
+
+        footer {
+            background-color: #ccfce4;
+            grid-column: span 2;
+        }
+
+        a {
+            color: #83818c;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #2c3e50; /* Darker color for hover effect */
+            text-decoration: underline;
+        }
+
+        /* Make sure sections take up space in the grid */
+        section, aside, article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ensure footer stretches across the bottom of the page */
+        footer {
+            align-self: end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>
+            <a class="nav" href="">Events</a>
+            <a class="nav" href="">Featured</a>
+            <a class="nav" href="">Pages</a>
+            <a class="nav" href="">About Us</a>
+        </nav>
+        <section>
+            <h3>I'm Vincent</h3>
+            <p>Hi! I'm Vincent</p>
+        </section>
+        <aside>
+            <h3>Who we are</h3>
+            <p>BlogSpots is our own blog site that we created for our class!</p>
+        </aside>
+        <article>
+            <h2>Google Chrome</h2>
+            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+        </article>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

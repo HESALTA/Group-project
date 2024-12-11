@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Personal Blog</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    .us {
+        width: 180px;
+        height: 180px;
+        border-radius: 30%;
+        border: 5px solid #f0e68c;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-image {
+        border: solid rgb(106, 58, 138) 10px;
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+        background-color: azure;
+    }
+
+    .vincent {
+        border: solid black 5px;
+        padding: 10px;
+        border-radius: 20px;
+        width: 40%;
+        justify-content: left;
+        background-color: white;
+    }
+    
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i>
+                <span>Group Blog</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="blog.html" class="nav-link"><i class="fas fa-book-open"></i>Blog</a></li>
+                <li><a href="about.html" class="nav-link active"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+            <button class="mobile-menu" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="fade-in">About Us</h1>
+            <p class="slide-up">Get to know the persons behind the blog</p>
+        </div>
+    </header>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image slide-in">
+                    <div class="vincent">
+                        <img src="./meeeee.jpg" alt="Author Portrait" class="us"> 
+                        <h2 class="fade-in">Hello, I'm Vincent</h2>
+                        <p class="slide-up">I'm a writer and chess master based in cebu city. With over 0 year of experience in digital world tournament, I've developed a keen eye for storytelling and engaging narratives.</p>                     
+                    </div>
+                    <div class="vincent">
+                        <img src="./banate.webp" alt="Author Portrait" class="us">
+                        <h2 class="fade-in">Hello, I'm Joshua</h2>
+                        <p class="slide-up">I'm a passionate writer and content creator based in New York. With over 5 years of experience in digital content creation, I've developed a keen eye for storytelling and engaging narratives.</p>
+                    </div>   
+                    <div class="vincent"> 
+                        <img src="./louise.jpg" alt="Author Portrait" class="us">
+                        <h2 class="fade-in">Hello, I'm Louise</h2>
+                        <p class="slide-up">I'm a passionate writer and content creator based in New York. With over 5 years of experience in digital content creation, I've developed a keen eye for storytelling and engaging narratives.</p>
+                    </div>
+                </div>
+                <div class="about-text">
+
+                    <div class="skills">
+                        <h3 class="fade-in">Our Routine</h3>
+                        <ul class="skill-list">
+                            <li class="slide-up">Playing Mobile Games</li>
+                            <li class="slide-up">Playing Guitar</li>
+                            <li class="slide-up">Photography</li>
+                            <li class="slide-up">Basketball</li>
+                        </ul>
+                    </div>
+                    <div class="interests">
+                        <h3 class="fade-in">What We Love</h3>
+                        <div class="interest-grid">
+                            <div class="interest-item slide-up">
+                                <i class="fas fa-plane"></i>
+                                <span>Traveling</span>
+                            </div>
+                            <div class="interest-item slide-up">
+                                <i class="fas fa-book"></i>
+                                <span>Reading</span>
+                            </div>
+                            <div class="interest-item slide-up">
+                                <i class="fas fa-camera"></i>
+                                <span>Photography</span>
+                            </div>
+                            <div class="interest-item slide-up">
+                                <i class="fas fa-coffee"></i>
+                                <span>Coffee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="fade-in">What People Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card slide-up">
+                    <div class="quote"><i class="fas fa-quote-left"></i></div>
+                    <p>John's writing style is engaging and informative. His blog posts always leave me with new insights.</p>
+                    <div class="author">
+                        <img src="./sarah.jpg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Regular Reader</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card slide-up">
+                    <div class="quote"><i class="fas fa-quote-left"></i></div>
+                    <p>The photography tips shared on this blog have helped me improve my skills significantly.</p>
+                    <div class="author">
+                        <img src="./mike.jpg" alt="Mike Thompson">
+                        <div class="author-info">
+                            <h4>Mike Thompson</h4>
+                            <span>Photograp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>

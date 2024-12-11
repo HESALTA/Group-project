@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: -70px; /* Compensate for navbar height */
+        }
+
+        .hero-content {
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            max-width: 1500px;
+            margin: 0 auto;
+            
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 5px 4px rgb(55, 5, 102);
+            color: rebeccapurple;
+
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-shadow: 3px 3px rgb(12, 86, 99);
+        }
+
+        .cta-button {
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+
+    @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i>
+                <span>Blog Website</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="blog.html" class="nav-link"><i class="fas fa-book-open"></i>Blog</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+                <li class="nav-search">
+                    <input type="search" placeholder="Search..." aria-label="Search">
+                    <button type="button" aria-label="Submit search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-menu" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Video Background and Hero Section -->
+    <div class="video-background">
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="./4k Storm for Live Wallpaper.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Welcome to Our Blog</h1>
+            <p class="slide-up">A place to share ideas, stories, and inspiration</p>
+            <p class="slide-up">Our blog website is a place where we share interesting ideas and stories with our readers. It covers a wide range of topics, including lifestyle, productivity, travel, and motivation. Whether you're looking for tips on improving your time management or exploring new travel destinations, our blog has something for everyone. We aim to inspire and inform, providing helpful advice and personal experiences that can benefit our readers. Our website is easy to navigate, so you can find the latest posts and featured articles with just a few clicks. </p>
+            <div class="hero-cta">
+                <button class="cta-button">Start Reading</button>
+                <button class="cta-button secondary">Subscribe</button>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="featured" class="featured-posts">
+        <div class="container">
+            <h2>Featured Posts</h2>
+            <div class="posts-grid">
+                <article class="post-card featured">
+                    <div class="post-image">
+                        <img src="./TimeManagement.gif" alt="Featured Post">
+                        <span class="category">Productivity</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>10 Tips for Better Time Management</h3>
+                        <p>Master your time with these proven strategies that will boost your productivity and reduce stress.</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                            <span><i class="far fa-calendar"></i> Jan 15, 1970</span>
+                        </div>
+                        <a href="Time management.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest" class="latest-posts">
+        <div class="container">
+            <h2>Latest Posts</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="./travel.gif" alt="Travel Post">
+                        <span class="category">Travel</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>The Ultimate Guide to Budget Travel</h3>
+                        <p>Discover how to explore the world without breaking the bank.</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                            <span><i class="far fa-calendar"></i> Jan 10, 1970</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="./motivaste.gif" alt="Motivation Post">
+                        <span class="category">Lifestyle</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>How to Stay Motivated Every Day</h3>
+                        <p>Simple techniques to maintain your motivation and achieve your goals.</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                            <span><i class="far fa-calendar"></i> Jan 5, 1970</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Get the latest posts and updates delivered straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="submit-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>A group blog sharing insights about life, productivity, and personal growth.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 1970 Personal Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

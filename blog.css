@@ -1,0 +1,83 @@
+/* Blog Section Styles */
+.featured-posts,
+.latest-posts {
+    padding: 5rem 0;
+}
+
+.featured-posts {
+    background: var(--light-gray);
+}
+
+.featured-posts h2,
+.latest-posts h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Blog Post Typography */
+.post-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Category Colors */
+.category[data-category="Productivity"] {
+    background: #6c5ce7;
+}
+
+.category[data-category="Travel"] {
+    background: #00b894;
+}
+
+.category[data-category="Lifestyle"] {
+    background: #e17055;
+}
+
+/* Post Grid Layouts */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Post Card Variations */
+.post-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.post-card.featured .post-image {
+    height: 100%;
+}
+
+.post-card.featured .post-content {
+    padding: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .post-card.featured {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card.featured .post-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-posts,
+    .latest-posts {
+        padding: 3rem 0;
+    }
+
+    .featured-posts h2,
+    .latest-posts h2 {
+        font-size: 2rem;
+    }
+}
